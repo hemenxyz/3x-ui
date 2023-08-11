@@ -1,7 +1,6 @@
 # ========================================================
 # Stage: Builder
 # ========================================================
-export BUILDPLATFORM=linux/arm64
 
 FROM golang:1.20.4-alpine AS builder
 WORKDIR /app
