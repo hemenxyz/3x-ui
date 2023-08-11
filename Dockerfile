@@ -1,7 +1,9 @@
 # ========================================================
 # Stage: Builder
 # ========================================================
-FROM --platform=$BUILDPLATFORM golang:1.20.4-alpine AS builder
+export BUILDPLATFORM=linux/arm64
+
+FROM golang:1.20.4-alpine AS builder
 WORKDIR /app
 ARG TARGETARCH
 ENV CGO_ENABLED=1
